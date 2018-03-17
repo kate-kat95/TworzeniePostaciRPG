@@ -20,6 +20,20 @@ public class Postac {
     	 // for testing purpose
     	 for(int i=0;i<this.WspolczynnikiPomocnicze.length;i++)
     		 this.WspolczynnikiPomocnicze[i]=0;
+    	 for(int i=0;i<this.Umietnosci.length;i++)
+    		 this.Umietnosci[i]=0;
+    	 for(int i=0;i<this.AkcjeRuch.length;i++)
+    		 this.AkcjeRuch[i]=0;
+    	 for(int i =0;i<this.AkcjeZwarcie.length;i++)
+    		 this.AkcjeZwarcie[i]=0;
+    	 for(int i =0;i<this.AkcjeRapierAtak.length;i++)
+    		 this.AkcjeRapierAtak[i]=0;
+    	 for(int i =0;i<this.AkcjeRapierObrona.length;i++)
+    		 this.AkcjeRapierObrona[i]=0;
+    	 for(int i =0;i<this.AkcjeMieczAtak.length;i++)
+    		 this.AkcjeMieczAtak[i]=0;
+    	 for(int i =0;i<this.AkcjeMieczObrona.length;i++)
+    		 this.AkcjeMieczObrona[i]=0;
     	// for testing purpose
     	 
     	 Random generator= new Random();
