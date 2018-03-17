@@ -17,10 +17,15 @@ public class Postac {
      
      public Postac() 
      {
+    	 // for testing purpose
+    	 for(int i=0;i<this.WspolczynnikiPomocnicze.length;i++)
+    		 this.WspolczynnikiPomocnicze[i]=0;
+    	// for testing purpose
+    	 
     	 Random generator= new Random();
     	 this.imie = "piotr";
     	 for(int i=0;i<this.WspolczynnikiGlowne.length;i++) {
-    		 WspolczynnikiGlowne[i] = generator.nextInt(14)+6;
+    		 this.WspolczynnikiGlowne[i] = generator.nextInt(14)+6;
     	 }	
      }
 }
