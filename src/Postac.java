@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class Postac {
 	
@@ -13,5 +14,13 @@ public class Postac {
      int[] AkcjeRapierObrona = new int[4];
      int[] AkcjeMieczAtak = new int [4];
      int[] AkcjeMieczObrona = new int[3];
-
+     
+     public Postac() 
+     {
+    	 Random generator= new Random();
+    	 this.imie = "piotr";
+    	 for(int i=0;i<this.WspolczynnikiGlowne.length;i++) {
+    		 WspolczynnikiGlowne[i] = generator.nextInt(14)+6;
+    	 }	
+     }
 }
