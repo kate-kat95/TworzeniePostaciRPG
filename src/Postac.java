@@ -118,6 +118,12 @@ public class Postac {
         	 }
          }
        //sword  
-         
+         AkcjeZwarcie[0] = (int)(WspolczynnikiPomocnicze[3] / 2) - 5;
+         AkcjeZwarcie[1] = (int)(WspolczynnikiPomocnicze[3] / 2) - 3;
+
+         for(int i=0;i<Umiejetnosci[0];i++) {
+        	 int los = generator.nextInt(2);
+        	 AkcjeZwarcie[los]++;
+         }
      }
 }
