@@ -67,5 +67,16 @@ public class Postac {
     	 }
     	 
     	 //determination of combat actions
+    	 AkcjeRuch[0] = WspolczynnikiPomocnicze[3] - 10;
+         AkcjeRuch[1] = WspolczynnikiPomocnicze[3] - 9;
+         AkcjeRuch[2] = WspolczynnikiPomocnicze[3] - 12;
+         AkcjeRuch[3] = (int)(WspolczynnikiPomocnicze[3]/3)+4;
+
+         for(int i=0;i<Umiejetnosci[1];i++) {
+        	 int los = generator.nextInt(4);
+        	 AkcjeRuch[los]++;
+         }
+         
+        //movements 
      }
 }
