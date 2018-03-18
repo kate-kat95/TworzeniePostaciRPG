@@ -99,7 +99,25 @@ public class Postac {
         	 		AkcjeRapierObrona[los]++;
         	 	}
          }
-         
+       //rapier
+         AkcjeMieczAtak[0] = (int)(WspolczynnikiPomocnicze[3] / 2) - 7;
+         AkcjeMieczAtak[1] = WspolczynnikiPomocnicze[3] - 17;
+         AkcjeMieczAtak[2] = (int)(WspolczynnikiPomocnicze[3] / 2) - 5;
+         AkcjeMieczAtak[3] = (int)(WspolczynnikiPomocnicze[3] / 3) - 3;
+
+         AkcjeMieczObrona[0] = (int)(WspolczynnikiPomocnicze[3] / 2) - 4;
+         AkcjeMieczObrona[1] = (int)(WspolczynnikiPomocnicze[3] / 2) - 4;
+         AkcjeMieczObrona[2] = WspolczynnikiPomocnicze[3] - 20;
+
+         for(int i=0;i<Umiejetnosci[3]/2;i++) {
+        	 int los = generator.nextInt(7);
+        	 if(los<7) AkcjeMieczAtak[los]++;
+        	 else {
+        		 los=los-4;
+        		 AkcjeMieczObrona[los]++;
+        	 }
+         }
+       //sword  
          
      }
 }
