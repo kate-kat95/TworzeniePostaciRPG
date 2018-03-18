@@ -78,5 +78,28 @@ public class Postac {
          }
          
         //movements 
+         AkcjeRapierAtak[0] = (int)(WspolczynnikiPomocnicze[3] / 2) - 5;
+         AkcjeRapierAtak[1] = (int)(WspolczynnikiPomocnicze[3] / 2) - 5;
+         AkcjeRapierAtak[2] = WspolczynnikiPomocnicze[3] -15;
+         AkcjeRapierAtak[3] = (int)(WspolczynnikiPomocnicze[3] / 2) - 7;
+         AkcjeRapierAtak[4] = WspolczynnikiPomocnicze[3] -12;
+         AkcjeRapierAtak[2] = WspolczynnikiPomocnicze[3] -8;
+         AkcjeRapierAtak[5] = (int)(WspolczynnikiPomocnicze[3] / 3) - 1;
+
+         AkcjeRapierObrona[0] = (int)(WspolczynnikiPomocnicze[3]/2)-2;
+         AkcjeRapierObrona[1] = (int)(WspolczynnikiPomocnicze[3]/2)-2;
+         AkcjeRapierObrona[2] = (int)(WspolczynnikiPomocnicze[3]/2)-5;
+         AkcjeRapierObrona[3] = WspolczynnikiPomocnicze[3]-18;
+
+         for(int i=0;i<Umiejetnosci[2]*3;i++) {
+        	 int los= generator.nextInt(10);
+        	 	if(los<6) AkcjeRapierAtak[los]++;
+        	 	else {
+        	 		los=los-6;
+        	 		AkcjeRapierObrona[los]++;
+        	 	}
+         }
+         
+         
      }
 }
