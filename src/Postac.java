@@ -40,6 +40,18 @@ public class Postac {
     	 this.imie = "piotr";
     	 for(int i=0;i<this.WspolczynnikiGlowne.length;i++) {
     		 this.WspolczynnikiGlowne[i] = generator.nextInt(14)+6;
-    	 }	
+    	 		}
+    	 
+    	//auxiliary coefficients
+    	 WspolczynnikiPomocnicze[0]=(WspolczynnikiGlowne[1]+WspolczynnikiGlowne[3]+WspolczynnikiGlowne[5])/3;
+    	 WspolczynnikiPomocnicze[1]=(WspolczynnikiGlowne[0]+WspolczynnikiGlowne[4]+WspolczynnikiGlowne[7])/3;
+    	 WspolczynnikiPomocnicze[2]=20;
+    	 WspolczynnikiPomocnicze[3]=(WspolczynnikiGlowne[0]+WspolczynnikiGlowne[1]+WspolczynnikiGlowne[2])/3;
+    	 WspolczynnikiPomocnicze[4]=(WspolczynnikiGlowne[0]+WspolczynnikiGlowne[3]+WspolczynnikiGlowne[5])/3;
+    	 
+    	 
+
+    	 
+    	 
      }
 }
