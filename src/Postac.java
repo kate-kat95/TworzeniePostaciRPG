@@ -57,11 +57,11 @@ public class Postac {
     	 }
     	 
     	//auxiliary coefficients
-    	 WspolczynnikiPomocnicze[0]=(WspolczynnikiGlowne[1]+WspolczynnikiGlowne[3]+WspolczynnikiGlowne[5])/3;
-    	 WspolczynnikiPomocnicze[1]=(WspolczynnikiGlowne[0]+WspolczynnikiGlowne[4]+WspolczynnikiGlowne[7])/3;
+    	 WspolczynnikiPomocnicze[0]=(int)(WspolczynnikiGlowne[1]+WspolczynnikiGlowne[3]+WspolczynnikiGlowne[5])/3;
+    	 WspolczynnikiPomocnicze[1]=(int)(WspolczynnikiGlowne[0]+WspolczynnikiGlowne[4]+WspolczynnikiGlowne[7])/3;
     	 WspolczynnikiPomocnicze[2]=20;
-    	 WspolczynnikiPomocnicze[3]=(WspolczynnikiGlowne[0]+WspolczynnikiGlowne[1]+WspolczynnikiGlowne[2])/3;
-    	 WspolczynnikiPomocnicze[4]=(WspolczynnikiGlowne[0]+WspolczynnikiGlowne[3]+WspolczynnikiGlowne[5])/3;
+    	 WspolczynnikiPomocnicze[3]=(int)(WspolczynnikiGlowne[0]+WspolczynnikiGlowne[1]+WspolczynnikiGlowne[2])/3;
+    	 WspolczynnikiPomocnicze[4]=(int)(WspolczynnikiGlowne[0]+WspolczynnikiGlowne[3]+WspolczynnikiGlowne[5])/3;
     	 
     	 //auxiliary coefficients without faith
     	 int SumaUmiejetnosci=8;
@@ -79,7 +79,7 @@ public class Postac {
     		 SumaUmiejetnosci++;
     	 }
     	 
-    	 //determination of combat actions
+    	 //determination of combat actions	
     	 AkcjeRuch[0] = WspolczynnikiPomocnicze[3] - 10;
          AkcjeRuch[1] = WspolczynnikiPomocnicze[3] - 9;
          AkcjeRuch[2] = WspolczynnikiPomocnicze[3] - 12;
@@ -124,7 +124,7 @@ public class Postac {
 
          for(int i=0;i<Umiejetnosci[3]/2;i++) {
         	 int los = generator.nextInt(7);
-        	 if(los<7) AkcjeMieczAtak[los]++;
+        	 if(los<4) AkcjeMieczAtak[los]++;
         	 else {
         		 los=los-4;
         		 AkcjeMieczObrona[los]++;
