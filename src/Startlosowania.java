@@ -110,10 +110,10 @@ class Postac {
         AkcjeRapierObrona[3] = WspolczynnikiPomocnicze[3]-18;
 
         for(int i=0;i<Umiejetnosci[2]*3;i++) {
-       	 int los= generator.nextInt(10);
-       	 	if(los<6) AkcjeRapierAtak[los]++;
+       	 int los= generator.nextInt(11);
+       	 	if(los<=6) AkcjeRapierAtak[los]++;
        	 	else {
-       	 		los=los-6;
+       	 		los=los-7;
        	 		AkcjeRapierObrona[los]++;
        	 	}
         }
