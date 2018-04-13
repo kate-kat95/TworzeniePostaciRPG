@@ -19,10 +19,11 @@ class Postac {
     int[] AkcjeRapierObrona = new int[4];
     int[] AkcjeMieczAtak = new int [4];
     int[] AkcjeMieczObrona = new int[3];
-    
+	 Random generator= new Random();
+	 
     public void losujpostac() throws FileNotFoundException 
     {
-   	 Random generator= new Random();
+   
    	 
    	 //name of this creature 
    	 int plec= generator.nextInt(2);
@@ -178,6 +179,55 @@ for(int i=0;i<3 ;i++) {
 }
       
     }
+//healing or hurting
+	public void Rany(Boolean ranka) {
+		
+		if(ranka==false) {
+			for(int i=0;i<3;i++) {
+				AkcjeZwarcie[i]++;
+			}
+			for(int i=0;i<4;i++) {
+				AkcjeMieczObrona[i]++;
+			}
+			for(int i=0;i<5;i++) {
+				AkcjeRuch[i]++;
+				AkcjeRapierObrona[i]++;
+				AkcjeMieczAtak[i]++;
+			}
+			for(int i=0;i<6;i++) {
+				WspolczynnikiPomocnicze[i]++;
+			}
+			for(int i=0;i<8;i++) {
+				AkcjeRapierAtak[i]++;
+			}
+			for(int i=0;i<9;i++) {
+				WspolczynnikiGlowne[i]++;
+			}
+
+		}
+		else {
+			for(int i=0;i<3;i++) {
+				AkcjeZwarcie[i]--;
+			}
+			for(int i=0;i<4;i++) {
+				AkcjeMieczObrona[i]--;
+			}
+			for(int i=0;i<5;i++) {
+				AkcjeRuch[i]--;
+				AkcjeRapierObrona[i]--;
+				AkcjeMieczAtak[i]--;
+			}
+			for(int i=0;i<6;i++) {
+				WspolczynnikiPomocnicze[i]--;
+			}
+			for(int i=0;i<8;i++) {
+				AkcjeRapierAtak[i]--;
+			}
+			for(int i=0;i<9;i++) {
+				WspolczynnikiGlowne[i]--;
+			}
+		}
+	}
 
 //SAvE YOUR CHARACTER! NEW IMPOSSIBLE OPTION! ONLY HERE XD
 		public void zapis() {
