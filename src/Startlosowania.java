@@ -228,11 +228,20 @@ for(int i=0;i<3 ;i++) {
 			}
 		}
 	}
+	
+//refreshing auxiliary coefficients
+	public void odswiez() {
+	  	 WspolczynnikiPomocnicze[0]=(int)(WspolczynnikiGlowne[1]+WspolczynnikiGlowne[3]+WspolczynnikiGlowne[5])/3;
+	   	 WspolczynnikiPomocnicze[1]=(int)(WspolczynnikiGlowne[0]+WspolczynnikiGlowne[4]+WspolczynnikiGlowne[7])/3;
+	   	 WspolczynnikiPomocnicze[3]=(int)(WspolczynnikiGlowne[0]+WspolczynnikiGlowne[1]+WspolczynnikiGlowne[2])/3;
+	   	 WspolczynnikiPomocnicze[4]=(int)(WspolczynnikiGlowne[0]+WspolczynnikiGlowne[3]+WspolczynnikiGlowne[5])/3;
+	}
+	
 
 //SAvE YOUR CHARACTER! NEW IMPOSSIBLE OPTION! ONLY HERE XD
 		public void zapis() {
 					try {
-						PrintWriter zapis = new PrintWriter("zapisanapostac.txt");
+						PrintWriter zapis = new PrintWriter("zapisanapostac"+" "+ imie+".txt");
 						zapis.println(imie);
 						zapis.println(SumaWspolczynnikowGlownych);
 						zapis.println(Rany);
